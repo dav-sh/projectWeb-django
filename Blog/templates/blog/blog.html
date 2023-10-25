@@ -29,8 +29,9 @@
     <section>
         <div style="margin: auto; width:75%; color: #fff; text-align:center; ">
             Categorias:
-                {%for category in categories %}
-                &nbsp&nbsp{{category.name}}&nbsp &nbsp
+                {%for categoria in categories %}
+                    <!-- <a class="section-heading"  href="{%url 'category' categoria.id %}"  >{{categoria.name}}&nbsp &nbsp</a> -->
+                <a class="section-ccc"  href="{%url 'category' categoria.id %}"  >{{categoria.name}}&nbsp &nbsp</a>
                 {%endfor %}
         </div>
     </section>

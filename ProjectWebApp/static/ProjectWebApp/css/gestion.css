@@ -125,6 +125,12 @@ p {
   position: relative;
 }
 
+.section-ccc {
+  text-transform: uppercase !important;
+  color: white !important;
+}
+
+
 @media (min-width: 992px) {
   .intro .intro-img {
     width: 75%;
@@ -276,4 +282,16 @@ ul.errorlist{
   padding-top: .75rem;
   font-style: italic;
   color: red;
+}
+
+
+.section-ccc {
+  text-transform: uppercase !important;
+  color: white !important;
+}
+
+
+.section-ccc:hover{
+  color: red;
+  text-decoration: none;
 }
