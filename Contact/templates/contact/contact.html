@@ -1,0 +1,39 @@
+{% extends "ProjectWebApp/base.html"%}
+{% load static  %}
+
+{% block content %}
+    
+    {%for post in posts %}
+        <section class="page-section clearfix">
+            <div class="container">
+            <div class="intro">
+                <!-- {% if post.image.url != "" %} -->
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.image.url}}" alt=" no encontrado">
+                <!-- {% endif %} -->
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4" >
+                        <span class="section-heading-lower">{{post.title}}</span>
+                        <span class="section-heading-upper">{{post.content}}</span>
+                    </h2>
+                    
+                    <p>Autor: {{post.author}}</p>
+                    
+                </div>
+            </div>
+            </div>
+        </section>
+        
+    {% endfor %}
+
+    
+    <section>
+        <div style="margin: auto; width:75%; color: #fff; text-align:center; ">
+            Categorias:
+                {%for categoria in categories %}
+                    <!-- <a class="section-heading"  href="{%url 'category' categoria.id %}"  >{{categoria.name}}&nbsp &nbsp</a> -->
+                <a class="section-ccc"  href="{%url 'category' categoria.id %}"  >{{categoria.name}}&nbsp &nbsp</a>
+                {%endfor %}
+        </div>
+    </section>
+
+{% endblock %}
