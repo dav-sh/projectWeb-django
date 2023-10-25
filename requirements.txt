@@ -2,4 +2,5 @@
 django==4.0
 djangorestframework
 psycopg2
-#Pillow
+Pillow
+#kinda bug with tkinter -> sudo apt-get install python3-tk
