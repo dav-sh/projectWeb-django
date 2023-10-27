@@ -295,3 +295,18 @@ ul.errorlist{
   color: red;
   text-decoration: none;
 }
+
+
+.container-form{
+  background-color: rgba(24, 64, 8);
+  width: 50%;
+  margin: auto;
+  padding: 1px auto;
+  border-radius: 5px;
+  
+
+}
+
+.container-form form{
+  text-align: center;
+}
