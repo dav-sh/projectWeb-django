@@ -3,6 +3,11 @@
 
 {% block content %}
     
+   {% if 'value' in request.GET %}
+   <!-- this is used when I already sent the form with the data and it is valid, so I'd explain to the user the following -->
+      <p style="color: white;">Informacion enviada correctamente</p>
+   {% endif%}
+
    <div class="container-form">
       <form action="" method="post">
          {% csrf_token %}
@@ -12,4 +17,5 @@
       </form>
         
    </div>
+<p style="color: white;">{{request.POST}}</p> 
 {% endblock %}
