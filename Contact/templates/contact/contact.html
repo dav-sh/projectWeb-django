@@ -5,7 +5,7 @@
     
    <div class="container-form">
       <form action="" method="post">
-
+         {% csrf_token %}
          <table style="color: white;"> {{my_form.as_table}}</table> 
          <!-- <p style="color: white;"> {{my_form.as_table}}</p>  -->
          <input type="submit" value="send">
