@@ -9,11 +9,9 @@ def home(request):
 
 
 
-def store(request):
-    return render(request, 'ProjectWebApp/store.html')
 
 
 
     
-def contact(request):
-    return render(request, 'ProjectWebApp/contact.html')
+# def contact(request):
+#     return render(request, 'ProjectWebApp/contact.html')
