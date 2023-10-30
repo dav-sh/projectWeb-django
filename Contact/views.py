@@ -14,7 +14,7 @@ def contact(request):
             email = request.POST.get('your_email')
             message = request.POST.get('your_message')
             # If I reach this point I gonna redirect the user to the same page but adding the 'value' just to know if it's valid
-            mail = EmailMessage('msg from django: '+name,message + ' email: '+email,"",'lvl1noob1@gmail.com',reply_to=[email])
+            mail = EmailMessage('msg from django: '+name,message + ' email: '+email,"?",['davisinn2020@gmail.com'],reply_to=[email])
             try:
                 mail.send()
                 return redirect('/contact/?value')

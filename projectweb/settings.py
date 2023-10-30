@@ -136,4 +136,4 @@ EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="lvl1noob1@gmail.com"
-EMAIL_HOST_PASSWORD='pw'
+EMAIL_HOST_PASSWORD='pfxk mhmf rhjw mnud'
