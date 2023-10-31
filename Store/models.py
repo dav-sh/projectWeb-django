@@ -27,6 +27,8 @@ class Product(models.Model):
     price = models.FloatField()
     disponibility = models.BooleanField(default=True)
     category = models.ForeignKey(CategoryProd, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateField(auto_now_add=True)
 
     class Meta():
         verbose_name = 'producto'

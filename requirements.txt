@@ -1,6 +1,6 @@
 #pip install -r requirements.txt
 django==4.0
 djangorestframework
-psycopg2
-Pillow
+psycopg2 #used to connect to postgress
+Pillow  #used to see images
 #kinda bug with tkinter -> sudo apt-get install python3-tk
