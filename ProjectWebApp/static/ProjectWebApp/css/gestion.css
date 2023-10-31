@@ -310,3 +310,7 @@ ul.errorlist{
 .container-form form{
   text-align: center;
 }
+
+.product-img{
+  height: 300px; 
+}

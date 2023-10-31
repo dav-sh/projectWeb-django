@@ -6,22 +6,25 @@
 
 
 <!-- <h1>store</h1> -->
-{% for prod in products %}
-
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
-
-        
-    
+{% for prod in products %}
 
 
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{prod.image.url}}" alt="Card image cap">
+        <div class="col-4 mt-2 mb-2">
+
+            <div class="card h-100 w-100 " >
+                {% if prod.image %}
+                    <img class="card-img-top  product-img" src="{{prod.image.url}}" alt="Card image cap">
+                {% else %}
+                    <img class="card-img-top  product-img" alt="Card image cap">
+                {% endif %}
                 <div class="card-body">
-                <h5 class="card-title">{{prod.name}}</h5>
-                <p class="card-text">{{prod.price}}</p>
-                <a href="#" class="btn btn-primary">"VER MAS"</a>
+                    <h5 class="card-title text-center ">{{prod.name}}</h5>
+                    <p class="card-text text-right">{{prod.price}}</p>
+                    <div class="col text-center">
+                        <a href="#" class="btn btn-primary">VER MAS</a>
+                    </div>
                 </div>
             </div>
 
@@ -29,9 +32,9 @@
 
 
         </div>
-    </div>
-</div>
+
 
 {% endfor %}
-
+    </div>
+</div>
 {% endblock %}
