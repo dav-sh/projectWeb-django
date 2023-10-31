@@ -50,6 +50,6 @@ class Cart:
                     break
         self.save_cart()
 
-    def delete_products(self):
+    def clean_cart(self):
         self.session['sh_cart'] = {}
         self.session.modify = True
