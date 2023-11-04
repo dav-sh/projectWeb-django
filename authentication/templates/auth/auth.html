@@ -1,0 +1,14 @@
+{% extends "ProjectWebApp/base.html"%}
+{% load static  %}
+
+{% block content %}
+    <form action="post" action="#" style="color: #fff;">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-success">Register</button>
+
+
+
+    </form>
+   
+{% endblock %}
