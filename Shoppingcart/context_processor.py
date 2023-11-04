@@ -4,7 +4,7 @@ def total_cart(request):
 
     if request.user.is_authenticated:
         for key, value in request.session['sh_cart'].items():
-            total = total + (float(value['product_price']*value['product_quantity']) )
+            total = total + (float(value['product_price'])*value['product_quantity']) 
 
     return {'total_cart': total}
 

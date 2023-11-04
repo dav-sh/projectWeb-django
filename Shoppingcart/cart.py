@@ -2,11 +2,11 @@ class Cart:
     def __init__(self, request):
         self.request = request
         self.session = request.session
-        cart = self.session.get('sh_cart') #obtain the actual shopping cart
-        if not cart:
+        carrito = self.session.get('sh_cart') #obtain the actual shopping cart
+        if not carrito:
             self.cart = self.session['sh_cart'] = {} #obtain the object sh_cart, create a {} dictionary and assing this to the sh_cart obtained
         else:
-            self.cart = cart #continue using the same cart object
+            self.cart = carrito #continue using the same cart object
         
     def add_product(self, product):
         if (str(product.id) not in self.cart.keys()):

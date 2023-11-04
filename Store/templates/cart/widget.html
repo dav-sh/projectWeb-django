@@ -13,4 +13,38 @@
             <th>Sub-total</th>
         </tr>
     </thead>
+
+    <tbody>
+        {% if request.session.sh_cart.items %}
+            {% for key,value in request.session.sh_cart.items %}
+
+                <tr class="text-center"> 
+                    <td> {{value.product_name}} </td>
+                    <td> {{value.product_quantity}} </td>
+                    <td> 
+                        <!-- calling urls from shopping cart -->
+                        <a href="{% url 'shopc:add' value.product_id%}" class="btn btn-sm btn-success">+</a>
+                        <a href="{% url 'shopc:substract' value.product_id%}" class="btn btn-sm btn-danger">-</a>
+                        {{value.product_price}}
+                    </td>
+                </tr>
+            {% endfor %}
+            
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">No products</div>
+                </td>
+            </tr>
+
+            
+        {% endif %}
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <!-- call the context_processor's function -->
+            <td colspan="3">total: Q. {{total_cart}}</td>
+        </tr>
+    </tfoot>
 </table>
