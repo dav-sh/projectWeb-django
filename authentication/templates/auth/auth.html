@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <form action="post" action="#" style="color: #fff;">
+    <form method="post" action="#"  style="color: #fff;">
         {% csrf_token %}
         <div style="width: 75%; margin: 0 auto;">
             {{form|crispy}}
