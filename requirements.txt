@@ -3,4 +3,6 @@ django==4.0
 djangorestframework
 psycopg2 #used to connect to postgress
 Pillow  #used to see images
+django-crispy-forms
+crispy-bootstrap4
 #kinda bug with tkinter -> sudo apt-get install python3-tk

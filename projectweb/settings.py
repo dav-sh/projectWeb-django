@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'Store',
     'Shoppingcart',
     'authentication',
+    'crispy_forms',
+     'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,7 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="lvl1noob1@gmail.com"
 EMAIL_HOST_PASSWORD='pfxk mhmf rhjw mnud'
+
+CRISPY_TEMPLATE_PACK = 'boostrap4'
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
