@@ -30,7 +30,7 @@
           Hola {{user.username}} &nbsp; &nbsp; <a href="{% url 'end_session'%}">Cerrar Sesion</a>
         {% else %}
 
-          <a href="#" >Ingresa</a> &nbsp; &nbsp; <a href="{% url 'authentication' %}">Registrate</a>
+          <a href="{% url 'v_login'%}" >Ingresa</a> &nbsp; &nbsp; <a href="{% url 'authentication' %}">Registrate</a>
         {% endif %}
     </div>
 
