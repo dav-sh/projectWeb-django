@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib import messages
 
@@ -33,3 +33,7 @@ def end_session(request):
     logout(request)
     return redirect(request, 'home')
 
+
+def login(request):
+    form = AuthenticationForm()
+    return render(request, 'login/login.html', {'form': form})
