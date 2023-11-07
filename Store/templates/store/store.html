@@ -11,7 +11,14 @@
         <!-- <p style="color: white; ">Carro de Compras, total: Q. {{total_cart}}</p> -->
         
         <!-- from Store/template include widget -->
-        {% include "cart/widget.html" %} 
+        {% if request.user.is_authenticated %}
+
+            {% include "cart/widget.html" %} 
+        {% else %}
+            
+            <span class="altert alert-danger text-center">Ingresa para ver el carro</span>
+
+        {% endif %}
     </div>
 
     <div class="row">
