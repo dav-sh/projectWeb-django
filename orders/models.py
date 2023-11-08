@@ -15,7 +15,7 @@ class Order(models.Model):
 
     @property
     def total(self):
-        return self.order_detail_set.aggregate(
+        return self.OrderDetail_set.aggregate(
             total = Sum(F('price')*F('quantity'), output_field = FloatField())
         )['total']
     
@@ -33,7 +33,7 @@ class Order(models.Model):
 
 
 
-class order_detail(models.Model):
+class OrderDetail(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     product_id =  models.ForeignKey(Product, on_delete=models.CASCADE)
     order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
