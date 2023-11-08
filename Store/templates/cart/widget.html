@@ -46,5 +46,12 @@
             <!-- call the context_processor's function -->
             <td colspan="3">total: Q. {{total_cart}}</td>
         </tr>
+        {% if request.session.sh_cart.items %}
+            <tr>
+                <td colspan="3" style="text-align: center; color: white;">
+                    <a href="#" class="btn btn-success">Pagar</a>
+                </td>
+            </tr>
+        {% endif %}
     </tfoot>
 </table>
