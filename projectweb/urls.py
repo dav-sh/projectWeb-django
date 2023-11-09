@@ -30,4 +30,5 @@ urlpatterns = [
     path('store/', include('Store.urls')),
     path('shop/', include('Shoppingcart.urls')),
     path('auth/', include('authentication.urls')),
+    path('process_order/', include('orders.urls')),
 ]

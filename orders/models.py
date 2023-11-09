@@ -35,13 +35,13 @@ class Order(models.Model):
 
 class OrderDetail(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
-    product_id =  models.ForeignKey(Product, on_delete=models.CASCADE)
-    order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product =  models.ForeignKey(Product, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
-        return f'{self.quantity} unidades de {self.product_id.name}'
+        return f'{self.quantity} unidades de {self.product.name}'
     
 
     class Meta:
